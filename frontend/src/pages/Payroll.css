@@ -1,0 +1,36 @@
+.payroll-page {
+  padding: 24px;
+}
+
+.payroll-summary {
+  background: #f0f5ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.payroll-table-container {
+  overflow-x: auto;
+}
+
+.payroll-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.payroll-page th,
+.payroll-page td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.payroll-page th {
+  background: #f4f4f4;
+}
+
+.payroll-page tbody tr:hover {
+  background: #f9fafb;
+}
