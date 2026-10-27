@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-WorkSphere is a web-based Human Resource Management System (HRMS) designed to simplify employee management, attendance tracking, leave management, payroll processing, and HR operations.
+WorkSphere is a web-based Human Resource Management System (HRMS) designed to simplify employee management, attendance tracking, leave management, payroll processing, performance management, document management, and HR operations.
 
 ## Technologies Used
 
@@ -38,6 +38,22 @@ WorkSphere is a web-based Human Resource Management System (HRMS) designed to si
 11. **Payroll Enhancements:** Provide salary breakdowns, monthly summaries, payslips, and payroll history.
 
 12. **Admin Controls & User Management:** Manage user roles, account activation, and deactivation.
+
+13. **Automated Attendance & Shift Management:** Assign employee shifts and support attendance monitoring.
+
+14. **Team Leave Calendar:** View and monitor employee leave schedules.
+
+15. **Document Management:** Manage employee-related documents.
+
+16. **Performance Management:** Maintain and manage employee performance records.
+
+17. **Advanced Analytics & Reports:** Generate HR reports and analyze workforce information.
+
+18. **Smart Notifications:** Provide relevant notifications for HR activities.
+
+19. **Employee Search & Filtering:** Search and filter employee records efficiently.
+
+20. **Enhanced HR Operations:** Extend employee and HR management workflows with additional controls and reporting.
 
 ## Installation and Setup
 
@@ -166,6 +182,61 @@ Swagger UI: <br>
 * Integrate user management with application routing and navigation
 * Restrict administrative features to authorized users
 
+### Module 14: Automated Attendance and Shift Management
+* Define employee shifts, including morning, evening, and night shifts.
+* Manage shift details such as start and end times.
+* Assign shifts to employees.
+* View employee shift schedules.
+* Support attendance monitoring based on shift timings.
+* Detect late arrivals and early departures where implemented.
+* Apply attendance validation and authorization rules.
+
+### Module 15: Team Leave Calendar
+* Display employee leave schedules in a calendar view.
+* Retrieve leave calendar information through the backend API.
+* View approved leave requests and relevant schedule information.
+* Support team-level leave planning.
+* Validate calendar date ranges.
+* Provide a React frontend page for viewing the team leave calendar.
+
+### Module 16: Document Management
+* Manage employee-related documents.
+* Support document records and associated employee information.
+* Provide backend document-management functionality.
+* Integrate document management with the application.
+* Apply appropriate authentication and access controls to document operations.
+
+### Module 17: Employee Performance Management
+* Maintain employee performance records.
+* Create and manage performance-related information.
+* Associate performance records with employees.
+* Retrieve performance information for authorized users.
+* Integrate performance management with the HRMS backend and frontend.
+
+### Module 18: Advanced Analytics and Reports
+* Provide advanced HR analytics and reporting functionality.
+* Display employee-related statistics and summaries.
+* Analyze attendance and leave information.
+* Generate payroll-related summaries and reports.
+* Present relevant workforce information through the reporting dashboard.
+* Validate report API responses and frontend report displays.
+
+### Module 19: Smart Notification System
+* Generate notifications for relevant HR activities.
+* Support automated notifications based on application events.
+* Store notification information in the database.
+* Retrieve notifications through backend APIs.
+* Integrate notification functionality with the frontend.
+* Support communication of important employee and HR updates.
+
+### Module 20: Employee Search and Filtering
+* Search employee records using supported search criteria.
+* Filter employee lists to find relevant records.
+* Retrieve employee information through the backend API.
+* Display search and filter results in the React frontend.
+* Support pagination for employee lists.
+* Improve employee record navigation and usability.
+
 ## API Documentation
 
 FastAPI automatically provides interactive API documentation through Swagger UI. <br>
@@ -180,3 +251,5 @@ Start the backend server and visit: <br>
 * Employee data ownership validation
 * Restricted HR and admin operations
 * User account activation and deactivation controls
+* Authentication and authorization for protected management operations
+* Validation of user permissions before accessing restricted resources
