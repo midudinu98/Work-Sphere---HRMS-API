@@ -1,0 +1,131 @@
+.notifications-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  color: #1f2937;
+}
+
+.notifications-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.notifications-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.notifications-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.unread-badge {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.notification-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.notification-card.unread {
+  border-left: 4px solid #2563eb;
+  background: #f8fbff;
+}
+
+.notification-card.read {
+  opacity: 0.8;
+}
+
+.notification-content {
+  min-width: 0;
+}
+
+.notification-content h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.notification-content p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.notification-content small {
+  color: #6b7280;
+}
+
+.mark-read-button,
+.refresh-notifications {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mark-read-button:hover,
+.refresh-notifications:hover {
+  background: #1d4ed8;
+}
+
+.notifications-empty {
+  padding: 40px 20px;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  color: #6b7280;
+}
+
+.notifications-empty h3 {
+  color: #1f2937;
+}
+
+.notification-error {
+  margin-bottom: 16px;
+  color: #b91c1c;
+}
+
+.refresh-notifications {
+  margin-top: 22px;
+}
+
+@media (max-width: 600px) {
+  .notifications-page {
+    padding: 20px 14px;
+  }
+
+  .notifications-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .notification-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

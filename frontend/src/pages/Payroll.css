@@ -1,0 +1,141 @@
+.payroll-page {
+  padding: 24px;
+  color: #1f2937;
+}
+
+.payroll-header {
+  margin-bottom: 24px;
+}
+
+.payroll-header h1 {
+  margin-bottom: 8px;
+}
+
+.payroll-header p {
+  color: #6b7280;
+}
+
+.payroll-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.payroll-filter label {
+  font-weight: 600;
+}
+
+.payroll-filter input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.payroll-filter button,
+.payroll-page button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.payroll-filter button:hover,
+.payroll-page button:hover {
+  background: #1d4ed8;
+}
+
+.payroll-summary {
+  background: #f0f5ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.payroll-summary h2 {
+  margin-top: 0;
+}
+
+.payroll-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.payroll-summary-grid article {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+
+.payroll-summary-grid h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.payroll-summary-grid p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.payroll-records {
+  margin-top: 28px;
+}
+
+.payroll-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.payroll-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: white;
+}
+
+.payroll-page th,
+.payroll-page td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.payroll-page th {
+  background: #f4f4f4;
+  font-weight: 600;
+}
+
+.payroll-page tbody tr:hover {
+  background: #f9fafb;
+}
+
+.payroll-page .payroll-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .payroll-page {
+    padding: 14px;
+  }
+
+  .payroll-summary {
+    padding: 14px;
+  }
+
+  .payroll-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
