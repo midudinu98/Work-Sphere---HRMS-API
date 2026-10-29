@@ -1,8 +1,0 @@
-fastapi
-uvicorn[standard]
-sqlalchemy
-pydantic[email]
-PyJWT
-pwdlib[argon2]
-python-multipart
-APScheduler
