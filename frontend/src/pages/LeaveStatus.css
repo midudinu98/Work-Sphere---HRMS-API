@@ -1,0 +1,62 @@
+.leave-balance-section,
+.leave-policy-section,
+.leave-history-section {
+  margin-top: 28px;
+}
+
+.leave-balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.leave-balance-card,
+.leave-policy-card {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.leave-balance-card h4 {
+  margin-top: 0;
+}
+
+.leave-balance-number {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+.leave-balance-number span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.leave-policy-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.leave-policy-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.leave-note {
+  color: #b45309;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .leave-policy-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
