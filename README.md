@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-WorkSphere is a web-based Human Resource Management System (HRMS) designed to simplify employee management, attendance tracking, leave management, payroll processing, performance management, document management, and HR operations.
+WorkSphere is a web-based Human Resource Management System (HRMS) designed to simplify employee management, attendance tracking, leave management, payroll processing, performance management, document management, employee onboarding, task tracking, and other HR operations.
+
+The application provides role-based access for Employees, HR, and Administrators, along with employee self-service features and administrative controls.
 
 ## Technologies Used
 
@@ -12,6 +14,7 @@ WorkSphere is a web-based Human Resource Management System (HRMS) designed to si
 * **ORM:** SQLAlchemy
 * **Authentication:** JWT (JSON Web Tokens)
 * **API Documentation:** Swagger UI
+* **Integrations:** Google Calendar, SMTP email, CSV and PDF exports
 
 ## Key Features
 
@@ -54,6 +57,19 @@ WorkSphere is a web-based Human Resource Management System (HRMS) designed to si
 19. **Employee Search & Filtering:** Search and filter employee records efficiently.
 
 20. **Enhanced HR Operations:** Extend employee and HR management workflows with additional controls and reporting.
+21. **Employee Onboarding System:** Assign onboarding tasks, track completion progress, and monitor pending activities.
+
+22. **Resignation & Exit Management:** Submit resignation requests, track request statuses, and manage exit approvals.
+
+23. **Internal Announcements System:** Publish and view organization-wide announcements with role-based access control.
+
+24. **Task Assignment & Tracking:** Assign tasks to employees, update task statuses, and monitor completion progress.
+
+25. **Third-Party Integrations:** Integrate Google Calendar, support SMTP email functionality, and export employee, attendance, leave, and payroll reports in CSV and PDF formats.
+
+26. **Employee Feedback System:** Allow employees to submit feedback and ratings and enable HR/Admin to review submissions.
+
+27. **Profile & Settings Management:** Update profile details, change passwords securely, and manage email, attendance, leave, and payroll notification preferences.
 
 ## Installation and Setup
 
@@ -237,6 +253,63 @@ Swagger UI: <br>
 * Support pagination for employee lists.
 * Improve employee record navigation and usability.
 
+### Module 21: Employee Onboarding System
+* Manage employee onboarding tasks.
+* Assign and list onboarding activities.
+* Track task status and completion progress.
+* Display total, completed, and pending tasks.
+* Show task due dates and status information.
+* Provide a React-based onboarding checklist and progress page.
+
+### Module 22: Resignation and Exit Management
+* Allow employees to submit resignation or exit requests.
+* Record resignation reasons and notice periods.
+* Track request statuses: PENDING, APPROVED, and REJECTED.
+* Allow authorized users to review and approve or reject requests.
+* Provide frontend functionality for resignation submission and exit-status tracking.
+
+### Module 23: Internal Announcements System
+* Allow HR and Admin users to publish announcements.
+* Store announcement titles, messages, creator information, and creation timestamps.
+* Allow users to view announcements.
+* Provide an announcement board and announcement-detail functionality.
+* Restrict announcement publishing to authorized roles.
+
+### Module 24: Task Assignment and Tracking
+* Assign tasks to employees.
+* Allow employees to view their assigned tasks.
+* Support task status updates and completion tracking.
+* Display pending and completed task counts.
+* Apply role-based access controls to task operations.
+* Provide frontend functionality for task assignment and progress monitoring.
+
+### Module 25: Third-Party Integrations
+* Export employee, attendance, leave, and payroll reports to CSV and PDF formats.
+* Support SMTP email integration and email notification functionality.
+* Provide an Integrations page in the frontend.
+* Connect to Google Calendar and display connection status.
+* Create test events in the connected Google Calendar.
+* Refresh the integration status and disconnect the calendar when required.
+
+### Module 26: Employee Feedback System
+* Allow authenticated employees to submit feedback.
+* Support feedback ratings on a scale of 1–5.
+* Validate feedback input and store submissions in the database.
+* Associate feedback with the submitting employee.
+* Provide HR and Admin users with a feedback dashboard.
+* Display feedback submissions in a table and support refreshing the results.
+* Apply authentication, role-based access, and input validation.
+
+### Module 27: Profile and Settings Management
+* Retrieve and update the authenticated user's account profile.
+* Allow username and email updates with duplicate-value validation.
+* Allow users to change their passwords after verifying the current password.
+* Validate new passwords and prevent reuse of the current password.
+* Store notification preferences for email, attendance, leave, and payroll notifications.
+* Provide a frontend page for profile details, password management, and notification settings.
+* Display employee employment details where available.
+* Apply authentication, data isolation, and access controls.
+
 ## API Documentation
 
 FastAPI automatically provides interactive API documentation through Swagger UI. <br>
@@ -245,11 +318,13 @@ Start the backend server and visit: <br>
 
 ## Security
 
-* JWT-based authentication
-* Role-based authorization
-* Protected API endpoints
-* Employee data ownership validation
-* Restricted HR and admin operations
-* User account activation and deactivation controls
-* Authentication and authorization for protected management operations
-* Validation of user permissions before accessing restricted resources
+* JWT-based authentication.
+* Role-based authorization for EMPLOYEE, HR, and ADMIN roles.
+* Protected API endpoints.
+* Employee data ownership validation.
+* Restricted HR and Admin operations.
+* User account activation and deactivation controls.
+* Password hashing and current-password verification during password changes.
+* Validation of user permissions before accessing restricted resources.
+* Input validation for supported API operations.
+* Authentication and authorization for profile, feedback, task, announcement, and other protected management operations.
